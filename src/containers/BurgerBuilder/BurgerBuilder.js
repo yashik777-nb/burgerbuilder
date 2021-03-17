@@ -1,6 +1,6 @@
 import React from "react";
 
-import Auxillary from "../../hoc/Auxillary";
+import Auxillary from "../../hoc/Auxillary/Auxillary";
 import Burger from "../../components/Burger/Burger";
 import BuildControls from "../../components/Burger/BuildControls/BuildControls";
 import Modal from "../../components/UI/Modal/Modal";
@@ -16,7 +16,7 @@ const INGREDIENT_PRICES = {
 class BurgerBuilder extends React.Component {
   state = {
     ingredients: {
-      salad: 0,
+      salad: 1,
       bacon: 0,
       cheese: 0,
       meat: 0,
@@ -64,7 +64,6 @@ class BurgerBuilder extends React.Component {
   };
 
   updatePurchaseState(updatedIngredients) {
-    console.log(updatedIngredients);
     const sum = Object.keys(updatedIngredients)
       .map((ingredientKey) => updatedIngredients[ingredientKey])
       .reduce((sum, val) => sum + val, 0);
