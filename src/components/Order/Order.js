@@ -10,8 +10,9 @@ const Order = (props) => {
       amount: props.ingredients[ingredientName],
     });
   }
-
+  let i = 0;
   const ingredientsUI = ingredients.map((ig) => {
+    i++;
     return (
       <span
         style={{
@@ -21,7 +22,7 @@ const Order = (props) => {
           border: "1px solid #ccc",
           padding: "5px",
         }}
-        key={ig.key}
+        key={i}
       >
         {ig.name} ({ig.amount})
       </span>

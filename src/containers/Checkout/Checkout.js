@@ -21,7 +21,7 @@ class Checkout extends React.Component {
     for (let param of query.entries()) {
       //['salad', '1']
       if (param[0] === "totalPrice") {
-        totalPrice = param[1];
+        totalPrice = +param[1];
       } else {
         ingredients[param[0]] = +param[1];
       }

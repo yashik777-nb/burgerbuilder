@@ -20,6 +20,7 @@ class Orders extends React.Component {
             id: key,
           });
         }
+        console.log(fetchedOrders);
         this.setState({
           orders: fetchedOrders,
           loading: false,
